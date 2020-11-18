@@ -25,16 +25,16 @@ At the start of a semester a faculty member will be given a section on his parti
 
 <p><strong>FEATURES</strong></p>
 <ul>
-<li>•	Easy to handle the app.</li>
-<li>•	Able to install in low end devices( at least android lollipop 5.0)</li>
-<li>•	Easy presentation to understand</li>
-<li>•	Easy Log-in process to take shorter time </li>
-<li>•	FAQ on every activity if anything is not understandable. </li>
-<li>•	A menu activity to manage sections properly</li>
-<li>•	An activity to view students data</li>
-<li>•	A mark sheet activity to update exam’s mark regularly</li>
-<li>•	An activity to watch student’s progress on total marks</li>
-<li>•	Students can be searched by ID to see their progress</li>
+<li>	Easy to handle the app.</li>
+<li>	Able to install in low end devices( at least android lollipop 5.0)</li>
+<li>	Easy presentation to understand</li>
+<li>	Easy Log-in process to take shorter time </li>
+<li>	FAQ on every activity if anything is not understandable. </li>
+<li>	A menu activity to manage sections properly</li>
+<li>	An activity to view students data</li>
+<li>	A mark sheet activity to update exam’s mark regularly</li>
+<li>	An activity to watch student’s progress on total marks</li>
+<li>	Students can be searched by ID to see their progress</li>
 </ul>
 <p><strong>TECHNOLOGY</strong></p>
 <p>I will build this Android app on Android Studio 4.0.1. The latest version for android developers to build android apps.</p>
@@ -51,8 +51,6 @@ At the start of a semester a faculty member will be given a section on his parti
 <p><strong>Monetization</strong></p>
 <p>This is actually a customized project not a generic project. This type of project held for particular organization. </p>
 <p>My application basically is on educational purpose. So, I have to charge an amount of money to an educational organization like North South University who will use this app.</p>
-<p>&nbsp;</p>
-
 <p>&nbsp;</p>
 <p><strong>Social Impact</strong></p>
 <p>This application will help the faculty or teachers. They are very busy to manage their student’s data properly. They don’t have enough time to do a lot of works properly at a time. They will be able to sort out the marks of students and don’t need to waste their time to calculate the final grade.</p>
