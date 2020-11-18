@@ -56,4 +56,4 @@ At the start of a semester a faculty member will be given a section on his parti
 <p>&nbsp;</p>
 <p><strong>Social Impact</strong></p>
 <p>This application will help the faculty or teachers. They are very busy to manage their student’s data properly. They don’t have enough time to do a lot of works properly at a time. They will be able to sort out the marks of students and don’t need to waste their time to calculate the final grade.</p>
-<p>&nbsp;</p>
+<p>&nbsp; </p>
