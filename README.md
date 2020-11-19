@@ -15,7 +15,7 @@
 
 
 <p align="center"><strong>Git Repository</strong><strong>: </strong><a href="https://github.com/NSU-FA20-CSE299-3/Group01">https://github.com/NSU-FA20-CSE299-3/Group01/</a></p>
-<p align="center"><strong>Date Prepared</strong><strong>: </strong>20/06/2019</p>
+<p align="center"><strong>Date Prepared</strong><strong>: </strong>11/11/2020</p>
 <p><strong>&nbsp;</strong></p>
 <p><strong>&nbsp;</strong></p>
 <p><strong>INTRODUCTION</strong></p>
