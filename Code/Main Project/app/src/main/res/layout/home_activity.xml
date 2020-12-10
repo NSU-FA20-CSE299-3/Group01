@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/buttonAddStudent"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="252dp"
+        android:layout_height="57dp"
+        android:backgroundTint="#000000"
+        android:text="ADD STUDENT"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.106"
+        app:strokeColor="#000000" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="157dp"
+        android:layout_height="55dp"
+        android:text="          HOME"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <Button
+        android:id="@+id/buttonStudentProgress"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="253dp"
+        android:layout_height="48dp"
+        android:text="STUDENT PROGRESS"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#090606"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddStudent"
+        app:layout_constraintVertical_bias="0.491" />
+
+    <Button
+        android:id="@+id/buttonMarksheet"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="255dp"
+        android:layout_height="51dp"
+        android:text="MARKSHEET"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#050303"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.436" />
+
+    <Button
+        android:id="@+id/buttonLogout"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00953535"
+        android:text="LOG OUT"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#E91E63"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84" />
+
+    <Button
+        android:id="@+id/buttonExamMarks"
+        android:layout_width="253dp"
+        android:layout_height="50dp"
+        android:background="#00FFFFFF"
+        android:text="MAINTAIN EXAM MARKS"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.538" />
+
+    <Button
+        android:id="@+id/buttonViewStudent"
+        android:layout_width="253dp"
+        android:layout_height="48dp"
+        android:background="#00FFFFFF"
+        android:text="Show Student"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.336" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
