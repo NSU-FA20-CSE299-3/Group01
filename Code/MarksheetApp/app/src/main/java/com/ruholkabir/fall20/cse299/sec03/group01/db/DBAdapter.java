@@ -32,25 +32,35 @@ public class DBAdapter extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String queryFaculty="CREATE TABLE "+ FACULTY_INFO_TABLE +" (" +
-                KEY_FACULTY_ID + " INTEGER PRIMARY KEW AUTOINCREAMENT, "+
+                KEY_FACULTY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "+
                 KEY_FACULTY_FIRSTNAME + " TEXT, " +
                 KEY_FACULTY_LASTNAME + " TEXT, "+
                 KEY_STUDENT_MO_NO + " TEXT, "+
                 KEY_FACULTY_ADDRESS + " TEXT, "+
                 KEY_FACULTY_USERNAME + " TEXT, " +
-                KEY_FACULTY_PASSWORD + " TEXT, " + ")";
+                KEY_FACULTY_PASSWORD + " TEXT " + ")";
         Log.d("queryFaculty", queryFaculty);
 
 
 
-        String queryStudent="CREAT TABLE " + STUDENT_INFO_TABLE + " (" +
+        String queryStudent="CREATE TABLE "+ STUDENT_INFO_TABLE +" (" +
                 KEY_STUDENT_ID + " INTEGER, " +
                 KEY_STUDENT_FIRSTNAME + " TEXT, " +
                 KEY_STUDENT_LASTNAME + " TEXT, " +
                 KEY_STUDENT_MO_NO + " TEXT, " +
-                KEY_STUDENT_SECTION + " TEXT, " + ")";
+                KEY_STUDENT_SECTION + " TEXT " + ")";
 
         Log.d("queryStudent", queryStudent );
+
+        try
+        {
+            db.execSQL(queryFaculty);
+            db.execSQL(queryStudent);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            Log.e("Exception", e.getMessage());
+        }
 
 
 
