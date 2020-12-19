@@ -72,7 +72,7 @@ public class DBAdapter extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int arg1, int arg2) {
-        String queryFaculty="CREATE TABLE"+ FACULTY_INFO_TABLE +" (" +
+        String queryFaculty="CREATE TABLE "+ FACULTY_INFO_TABLE +" (" +
                 KEY_FACULTY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "+
                 KEY_FACULTY_FIRSTNAME + " TEXT, " +
                 KEY_FACULTY_LASTNAME + " TEXT, "+
@@ -82,8 +82,31 @@ public class DBAdapter extends SQLiteOpenHelper {
                 KEY_FACULTY_PASSWORD + " TEXT " + ")";
         Log.d("queryFaculty", queryFaculty);
 
+        String queryStudent="CREATE TABLE "+ STUDENT_INFO_TABLE + " (" +
+                KEY_STUDENT_ID + " INTEGER, " +
+                KEY_STUDENT_FIRSTNAME + " TEXT, " +
+                KEY_STUDENT_LASTNAME + " TEXT, " +
+                KEY_STUDENT_MO_NO + " TEXT, " +
+                KEY_STUDENT_SECTION + " TEXT " + ")";
+        Log.d("queryStudent", queryStudent);
 
 
 
+        try
+        {
+            db.execSQL(queryFaculty);
+            db.execSQL(queryStudent);
+        }
+
+        catch (Exception e) {
+            e.printStackTrace();
+            Log.e("Exception", e.getMessage());
+        }
     }
+
+
+
+
+
+
 }
