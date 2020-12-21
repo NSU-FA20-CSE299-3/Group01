@@ -1,6 +1,7 @@
 package com.ruholkabir.fall20.cse299.sec03.group01.db;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -124,7 +125,30 @@ public class DBAdapter extends SQLiteOpenHelper {
 
 
     }
+    public FacultyBean validateFaculty(String userName,String password)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
 
+        String query = "SELECT * FROM faculty_table where faculty_username='"+userName+"' and faculty_password='"+password+"'";
+        Cursor cursor = db.rawQuery(query, null);
+        if(cursor.moveToFirst())
+        {
+
+            FacultyBean facultyBean = new FacultyBean();
+            facultyBean.setFaculty_id(Integer.parseInt(cursor.getString(0)));
+            facultyBean.setFaculty_firstname(cursor.getString(1));
+            facultyBean.setFaculty_lastname(cursor.getString(2));
+            facultyBean.setFaculty_mobilenumber(cursor.getString(3));
+            facultyBean.setFaculty_address(cursor.getString(4));
+            facultyBean.setFaculty_username(cursor.getString(5));
+            facultyBean.setFaculty_password(cursor.getString(6));
+            return facultyBean;
+
+        }
+        return null;
+
+
+    }
 
 
 }
