@@ -155,40 +155,50 @@ public class DBAdapter extends SQLiteOpenHelper {
 
     public ArrayList<FacultyBean> getAllFaculty()
     {
-        Log.d("in get all", "in get all" );
+        Log.d("in get all", "in get all");
         ArrayList<FacultyBean> list = new ArrayList<FacultyBean>();
 
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "SELECT * FROM faculty_table";
-       Cursor cursor = db.rawQuery(query, null);
+        Cursor cursor = db.rawQuery(query, null);
 
-       if(cursor.moveToFirst())
-       {
-           do{
-               FacultyBean facultyBean = new FacultyBean();
-               facultyBean.setFaculty_id(Integer.parseInt(cursor.getString(0)));
-               facultyBean.setFaculty_firstname(cursor.getString(1));
-               facultyBean.setFaculty_lastname(cursor.getString(2));
-               facultyBean.setFaculty_mobilenumber(cursor.getString(3));
-               facultyBean.setFaculty_address(cursor.getString(4));
-               facultyBean.setFaculty_username(cursor.getString(5));
-               facultyBean.setFaculty_password(cursor.getString(6));
+        if (cursor.moveToFirst())
+        {
+            do {
+                FacultyBean facultyBean = new FacultyBean();
+                facultyBean.setFaculty_id(Integer.parseInt(cursor.getString(0)));
+                facultyBean.setFaculty_firstname(cursor.getString(1));
+                facultyBean.setFaculty_lastname(cursor.getString(2));
+                facultyBean.setFaculty_mobilenumber(cursor.getString(3));
+                facultyBean.setFaculty_address(cursor.getString(4));
+                facultyBean.setFaculty_username(cursor.getString(5));
+                facultyBean.setFaculty_password(cursor.getString(6));
 
-           }while(cursor.moveToNext());
+            } while (cursor.moveToNext());
+        }
 
-           return list;
-
-
-
-
-       }
-
-
-
-
+        return list;
 
 
     }
+
+
+       public void deleteFaculty(int facultyId) {
+           SQLiteDatabase db = this.getWritableDatabase();
+           String query = "DELETE FROM faculty_table WHERE faculty_id="+facultyId;
+
+           Log.d("query", query);
+           db.execSQL(query);
+           db.close();
+
+    }
+
+
+
+
+
+
+
 
 
 
