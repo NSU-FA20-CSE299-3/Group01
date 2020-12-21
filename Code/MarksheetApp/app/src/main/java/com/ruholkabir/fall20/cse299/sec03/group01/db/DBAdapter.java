@@ -5,6 +5,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import com.ruholkabir.fall20.cse299.sec03.group01.bean.FacultyBean;
+
 public class DBAdapter extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
@@ -105,7 +107,23 @@ public class DBAdapter extends SQLiteOpenHelper {
     }
 
 
+    public void addFaculty(FacultyBean facultyBean) {
 
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        String query = "INSERT INTO faculty_table (faculty_firstname,faculty_lastname,faculty_mobilenumber,faculty_address,faculty_username,faculty_password) values ('" +
+                facultyBean.getFaculty_firstname()+"', '"+
+                facultyBean.getFaculty_lastname()+"', '"+
+                facultyBean.getFaculty_mobilenumber()+"', '"+
+                facultyBean.getFaculty_address()+"', '"+
+                facultyBean.getFaculty_username()+"', '"+
+                facultyBean.getFaculty_password()+"')";
+        Log.d("query", query);
+        db.execSQL(query);
+        db.close();
+
+
+    }
 
 
 
