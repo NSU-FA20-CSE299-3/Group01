@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import com.ruholkabir.fall20.cse299.sec03.group01.bean.FacultyBean;
+import com.ruholkabir.fall20.cse299.sec03.group01.bean.StudentBean;
 
 import java.util.ArrayList;
 
@@ -193,8 +194,24 @@ public class DBAdapter extends SQLiteOpenHelper {
 
     }
 
+    public void addStudent(StudentBean studentBean) {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        String query = "INSERT INTO student_table (student_id,student_firstname,student_lastname,student_mobilenumber,student_section) values ('"+
+                studentBean.getStudent_id()+"', '"+
+                studentBean.getStudent_firstname()+"', '"+
+                studentBean.getStudent_lastname()+"', '"+
+                studentBean.getStudent_mobilenumber()+"', '"+
+                studentBean.getStudent_section()+"')";
+
+        Log.d("query", query);
+        db.execSQL(query);
+        db.close();
 
 
+    }
+    
 
 
 
