@@ -294,7 +294,18 @@ public class DBAdapter extends SQLiteOpenHelper {
 
     }
 
+    public void deleteStudent(int studentId) {
 
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        String query = "DELETE FROM student_table WHERE student_id="+studentId;
+
+        Log.d("query", query);
+        db.execSQL(query);
+        db.close();
+
+
+    }
 
 
 
