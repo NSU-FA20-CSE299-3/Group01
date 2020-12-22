@@ -237,6 +237,37 @@ public class DBAdapter extends SQLiteOpenHelper {
 
 
 
+    public ArrayList<StudentBean> getAllStudentBySection(String student_section)
+    {
+        ArrayList<StudentBean> list = new ArrayList<StudentBean>();
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        String query = "SELECT * FROM student_table where student_section='"+student_section+"' ";
+
+        Cursor cursor = db.rawQuery(query, null);
+
+        if(cursor.moveToFirst())
+        {
+            do{
+                StudentBean studentBean = new StudentBean();
+                studentBean.setStudent_id(Integer.parseInt(cursor.getString(0)));
+                studentBean.setStudent_firstname(cursor.getString(1));
+                studentBean.setStudent_lastname(cursor.getString(2));
+                studentBean.setStudent_mobilenumber(cursor.getString(3));
+                studentBean.setStudent_section(cursor.getString(4));
+                list.add(studentBean);
+
+
+            }while(cursor.moveToNext());
+
+        }
+        return list;
+
+
+    }
+
+
+
 
 
 
