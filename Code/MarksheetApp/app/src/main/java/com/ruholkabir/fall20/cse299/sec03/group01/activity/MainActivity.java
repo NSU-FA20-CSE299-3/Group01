@@ -2,14 +2,17 @@ package com.ruholkabir.fall20.cse299.sec03.group01.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.ruholkabir.fall20.cse299.sec03.group01.R;
 import com.ruholkabir.fall20.cse299.sec03.group01.bean.FacultyBean;
+import com.ruholkabir.fall20.cse299.sec03.group01.context.ApplicationContext;
 import com.ruholkabir.fall20.cse299.sec03.group01.db.DBAdapter;
 
 public class MainActivity extends AppCompatActivity {
@@ -44,9 +47,21 @@ public class MainActivity extends AppCompatActivity {
                 DBAdapter dbAdapter = new DBAdapter(MainActivity.this);
                 FacultyBean facultyBean = dbAdapter.validateFaculty(user_name, pass_word);
 
-
+                if(facultyBean!=null)
+                {
+                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                    startActivity(intent);
+                    ((ApplicationContext)MainActivity.this.getApplicationContext()).setFacultyBean(facultyBean);
+                    Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"Login Failed", Toast.LENGTH_SHORT).show();
+                }
             }
         });
+
+        
 
 
 
