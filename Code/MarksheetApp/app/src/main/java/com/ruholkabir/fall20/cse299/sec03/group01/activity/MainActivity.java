@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.ruholkabir.fall20.cse299.sec03.group01.R;
+import com.ruholkabir.fall20.cse299.sec03.group01.bean.FacultyBean;
+import com.ruholkabir.fall20.cse299.sec03.group01.db.DBAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
                     password.setError("Enter Password");
                 }
 
-                
+                DBAdapter dbAdapter = new DBAdapter(MainActivity.this);
+                FacultyBean facultyBean = dbAdapter.validateFaculty(user_name, pass_word);
 
 
             }
