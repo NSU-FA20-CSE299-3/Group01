@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.login);
         login=(Button)findViewById(R.id.buttonlogin);
         register=(Button)findViewById(R.id.buttonregister);
-        username=(EditText)findViewById(R.id.editTextusername);
-        password=(EditText)findViewById(R.id.editTextpassword);
+        username=(EditText)findViewById(R.id.editTextusernameLOG);
+        password=(EditText)findViewById(R.id.editTextpasswordLOG);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override

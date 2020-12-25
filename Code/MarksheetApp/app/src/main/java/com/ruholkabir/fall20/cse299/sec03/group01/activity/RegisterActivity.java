@@ -22,9 +22,15 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
 
+        textFirstName=(EditText)findViewById(R.id.editTextFirstname);
+        textLastName=(EditText)findViewById(R.id.editTextlastname);
+        textPhoneNumber=(EditText)findViewById(R.id.editTextPhoneNumber);
+        textAddress=(EditText)findViewById(R.id.editTextAddress);
+        textUsername=(EditText)findViewById(R.id.editTextUsernameREG);
+        textPassword=(EditText)findViewById(R.id.editTextPasswordREG);
+        registerButton=(Button)findViewById(R.id.DoneButton);
 
 
-        
 
     }
 
