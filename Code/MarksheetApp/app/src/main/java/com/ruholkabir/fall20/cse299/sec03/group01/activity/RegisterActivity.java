@@ -1,12 +1,16 @@
 package com.ruholkabir.fall20.cse299.sec03.group01.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.ruholkabir.fall20.cse299.sec03.group01.R;
+import com.ruholkabir.fall20.cse299.sec03.group01.bean.FacultyBean;
+import com.ruholkabir.fall20.cse299.sec03.group01.db.DBAdapter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -65,7 +69,24 @@ public class RegisterActivity extends AppCompatActivity {
                 {
                     textPassword.setError("Please Enter a password");
                 }
-                
+                else
+                {
+                    FacultyBean facultyBean = new FacultyBean();
+                    facultyBean.setFaculty_firstname(first_name);
+                    facultyBean.setFaculty_lastname(last_name);
+                    facultyBean.setFaculty_mobilenumber(phone_number);
+                    facultyBean.setFaculty_address(address);
+                    facultyBean.setFaculty_username(username);
+                    facultyBean.setFaculty_password(password);
+
+
+                    DBAdapter dbAdapter = new DBAdapter(RegisterActivity.this);
+                    dbAdapter.addFaculty(facultyBean);
+                    Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    Toast.makeText(getApplicationContext(), "Registration Successful", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 
