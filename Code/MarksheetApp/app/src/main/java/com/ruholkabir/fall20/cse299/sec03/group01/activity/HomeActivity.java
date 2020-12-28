@@ -17,7 +17,7 @@ public class HomeActivity extends AppCompatActivity {
     Button examMarks;
     Button logout;
 
-    Protected void onCreate(Bundle savedInstaceState) {
+    protected void onCreate(Bundle savedInstaceState) {
         super.onCreate(savedInstaceState);
         setContentView(R.layout.home);
 
@@ -32,10 +32,49 @@ public class HomeActivity extends AppCompatActivity {
         addStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, )
+                Intent intent = new Intent(HomeActivity.this, AddStudentActivity.class);
+                startActivity(intent);
             }
         });
 
+        StudentProgress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, StudentProgressActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        viewStudent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, ViewStudent.class);
+                startActivity(intent);
+            }
+        });
+
+
+        marksheet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, MarksheetActivity.class);
+                startActivity(intent);
+            }
+        });
+        examMarks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, ExamMarksActivity.class);
+                startActivity(intent);
+            }
+        });
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }
