@@ -1,6 +1,7 @@
 package com.ruholkabir.fall20.cse299.sec03.group01.activity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -29,7 +30,26 @@ public class AddStudentActivity extends AppCompatActivity {
         textMobileNumber = (EditText)findViewById(R.id.editTextphnNostd);
         textSection = (EditText)findViewById(R.id.EditTextSectionstd);
 
+        addbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int student_id = Integer.parseInt(textID.getText().toString());
+                String first_name = textFirstName.getText().toString();
+                String last_name = textLastName.getText().toString();
+                String phone_no = textMobileNumber.getText().toString();
+                String student_section = textSection.getText().toString();
 
+
+
+
+
+
+
+
+
+
+            }
+        });
     }
 
 }
