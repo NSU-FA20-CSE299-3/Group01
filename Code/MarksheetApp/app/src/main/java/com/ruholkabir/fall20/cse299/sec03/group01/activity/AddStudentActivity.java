@@ -1,13 +1,16 @@
 package com.ruholkabir.fall20.cse299.sec03.group01.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.ruholkabir.fall20.cse299.sec03.group01.R;
 import com.ruholkabir.fall20.cse299.sec03.group01.bean.StudentBean;
+import com.ruholkabir.fall20.cse299.sec03.group01.db.DBAdapter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -62,6 +65,15 @@ public class AddStudentActivity extends AppCompatActivity {
                     studentBean.setStudent_lastname(last_name);
                     studentBean.setStudent_mobilenumber(phone_no);
                     studentBean.setStudent_section(student_section);
+
+                    DBAdapter dbAdapter = new DBAdapter(AddStudentActivity.this);
+                    dbAdapter.addStudent(studentBean);
+
+                    Intent intent = new Intent(AddStudentActivity.this,HomeActivity.class);
+                    startActivity(intent);
+                    Toast.makeText(getApplicationContext()"Student Added Successfully", Toast.LENGTH_SHORT).show();
+
+
                 }
 
 
