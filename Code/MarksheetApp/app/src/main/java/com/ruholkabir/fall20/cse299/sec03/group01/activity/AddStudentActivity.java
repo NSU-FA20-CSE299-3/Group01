@@ -57,7 +57,11 @@ public class AddStudentActivity extends AppCompatActivity {
                 }
                 else{
                     StudentBean studentBean = new StudentBean();
-                    
+                    studentBean.setStudent_id(student_id);
+                    studentBean.setStudent_firstname(first_name);
+                    studentBean.setStudent_lastname(last_name);
+                    studentBean.setStudent_mobilenumber(phone_no);
+                    studentBean.setStudent_section(student_section);
                 }
 
 
