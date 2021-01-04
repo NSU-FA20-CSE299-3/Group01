@@ -1,11 +1,13 @@
 package com.ruholkabir.fall20.cse299.sec03.group01.activity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import com.ruholkabir.fall20.cse299.sec03.group01.R;
+import com.ruholkabir.fall20.cse299.sec03.group01.bean.StudentBean;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -38,7 +40,25 @@ public class AddStudentActivity extends AppCompatActivity {
                 String last_name = textLastName.getText().toString();
                 String phone_no = textMobileNumber.getText().toString();
                 String student_section = textSection.getText().toString();
-
+                if(textID.getText().toString().trim().isEmpty()){
+                    textID.setError("PLEASE Enter Student ID");
+                }
+                else if(TextUtils.isEmpty(first_name)){
+                    textFirstName.setError("Please Enter First Name");
+                }
+                else if(TextUtils.isEmpty(last_name)){
+                    textFirstName.setError("Please Enter last Name");
+                }
+                else if(TextUtils.isEmpty(phone_no)){
+                    textFirstName.setError("Please Enter Phone Number");
+                }
+                else if(TextUtils.isEmpty(student_section)){
+                    textFirstName.setError("Please Enter Section Number");
+                }
+                else{
+                    StudentBean studentBean = new StudentBean();
+                    
+                }
 
 
 
