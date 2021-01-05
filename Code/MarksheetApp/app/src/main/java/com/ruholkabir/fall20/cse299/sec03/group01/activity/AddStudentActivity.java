@@ -71,7 +71,7 @@ public class AddStudentActivity extends AppCompatActivity {
 
                     Intent intent = new Intent(AddStudentActivity.this,HomeActivity.class);
                     startActivity(intent);
-                    Toast.makeText(getApplicationContext()"Student Added Successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Student Added Successfully", Toast.LENGTH_SHORT).show();
 
 
                 }
