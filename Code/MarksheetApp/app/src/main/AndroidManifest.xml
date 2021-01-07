@@ -25,6 +25,21 @@
         <activity android:name=".activity.AddStudentActivity">
 
         </activity>
+        <activity android:name=".activity.ExamMarksActivity">
+
+        </activity>
+        <activity android:name=".activity.MarksheetActivity">
+
+        </activity>
+        <activity android:name=".activity.ViewStudent">
+
+        </activity>
+        <activity android:name=".activity.StudentProgressActivity">
+
+        </activity>
+        <activity android:name=".activity.StudentListView">
+            
+        </activity>
     </application>
 
 </manifest>

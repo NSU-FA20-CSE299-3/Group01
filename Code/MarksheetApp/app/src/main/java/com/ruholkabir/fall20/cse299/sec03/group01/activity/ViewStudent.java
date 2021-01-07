@@ -1,4 +1,6 @@
 package com.ruholkabir.fall20.cse299.sec03.group01.activity;
 
-public class ViewStudent {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class ViewStudent extends AppCompatActivity {
 }
