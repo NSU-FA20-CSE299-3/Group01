@@ -1,9 +1,11 @@
 package com.ruholkabir.fall20.cse299.sec03.group01.activity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -34,10 +36,29 @@ public class ViewStudent extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> arg0) {
-                
+
 
             }
         });
+
+
+        ArrayAdapter<String> adapter_section = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item,sectionString);
+        adapter_section.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerSection.setAdapter(adapter_section);
+
+        submit=(Button)findViewById(R.id.buttonSubmitSection);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(ViewStudent.this, StudentListView.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
 
     }
 
