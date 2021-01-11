@@ -35,9 +35,9 @@ public class StudentListView extends AppCompatActivity {
         section = getIntent().getExtras().getString("section");
 
         studentBeanList = dbAdapter.getAllStudentBySection(section);
-        for(StudentBean studentBean : studentBeanList);
+        for(StudentBean studentBean : studentBeanList)
         {
-            String users = studentBean.getStudent_id + "     "+studentBean.getStudent_firstname()+"     "+studentBean.getStudent_lastname()+"     "+studentBean.getStudent_mobilenumber();
+            String users = studentBean.getStudent_id()+ "    "+studentBean.getStudent_firstname()+"    "+studentBean.getStudent_lastname()+"    "+studentBean.getStudent_mobilenumber();
             studentList.add(users);
             Log.d("users: ", users);
         }
@@ -67,7 +67,7 @@ public class StudentListView extends AppCompatActivity {
 
                         for(StudentBean studentBean: studentBeanList)
                         {
-                            String users = studentBean.getStudent_id() + "," + studentBean.setStudent_firstname() + "," + studentBean.getStudent_lastname() + "," + studentBean.getStudent_mobilenumber();
+                            String users = studentBean.getStudent_id() + "," + studentBean.getStudent_firstname() + "," + studentBean.getStudent_lastname() + "," + studentBean.getStudent_mobilenumber();
                             studentList.add(users);
                             Log.d("users: ", users);
 

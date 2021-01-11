@@ -51,6 +51,7 @@ public class ViewStudent extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent =new Intent(ViewStudent.this, StudentListView.class);
+                intent.putExtra("section", section);
                 startActivity(intent);
             }
         });
