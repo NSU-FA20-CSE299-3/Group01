@@ -9,6 +9,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class StudentProgressActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.student_progress;
+        setContentView(R.layout.student_progress);
     }
 }
