@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     Button quiz;
     Button mid;
     Button finalExam;
+    Button Marksheet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         quiz=(Button)findViewById(R.id.quizButton);
         mid=(Button)findViewById(R.id.midButton);
         finalExam=(Button)findViewById(R.id.finalButton);
+        Marksheet=(Button)findViewById(R.id.buttonMArksheet);
 
         quiz.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +46,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, FinalMarksActivity.class);
                 startActivity(intent);
+            }
+        });
+        Marksheet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MarksheetActivity.class);
+                startActivity(intent);
+
             }
         });
 
