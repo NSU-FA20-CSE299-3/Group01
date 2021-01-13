@@ -6,11 +6,11 @@ import com.ruholkabir.fall20.cse299.sec03.practiceappii.R;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MarksheetActivity extends AppCompatActivity {
+public class MidMarksActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.marksheet);
+        setContentView(R.layout.mid_marks);
 
 
 
