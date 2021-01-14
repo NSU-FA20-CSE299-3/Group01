@@ -13,9 +13,9 @@ import java.util.ArrayList;
 public class ApplicationContext extends Application {
     private FacultyBean facultyBean;
     private ArrayList<StudentBean> studentBeanList;
-    private QuizBean quizBean;
-    private MidBean midBean;
-    private FinalBean finalBean;
+    private ArrayList<QuizBean> quizBeanList;
+    private ArrayList<MidBean> midBeanList;
+    private ArrayList<FinalBean> finalBeanList;
 
     public FacultyBean getFacultyBean() {
         return facultyBean;
@@ -33,27 +33,27 @@ public class ApplicationContext extends Application {
         this.studentBeanList = studentBeanList;
     }
 
-    public QuizBean getQuizBean() {
-        return quizBean;
+    public ArrayList<QuizBean> getQuizBeanList() {
+        return quizBeanList;
     }
 
-    public void setQuizBean(QuizBean quizBean) {
-        this.quizBean = quizBean;
+    public void setQuizBeanList(ArrayList<QuizBean> quizBeanList) {
+        this.quizBeanList = quizBeanList;
     }
 
-    public MidBean getMidBean() {
-        return midBean;
+    public ArrayList<MidBean> getMidBeanList() {
+        return midBeanList;
     }
 
-    public void setMidBean(MidBean midBean) {
-        this.midBean = midBean;
+    public void setMidBeanList(ArrayList<MidBean> midBeanList) {
+        this.midBeanList = midBeanList;
     }
 
-    public FinalBean getFinalBean() {
-        return finalBean;
+    public ArrayList<FinalBean> getFinalBeanList() {
+        return finalBeanList;
     }
 
-    public void setFinalBean(FinalBean finalBean) {
-        this.finalBean = finalBean;
+    public void setFinalBeanList(ArrayList<FinalBean> finalBeanList) {
+        this.finalBeanList = finalBeanList;
     }
 }

@@ -5,7 +5,7 @@ public class MidBean {
     private int student_id_mid;
     private String  student_name_mid;
     private String student_section_mid;
-    private float student_mid_marks;
+    private String student_mid_marks;
 
 
     public int getStudent_id_mid(){return student_id_mid;}
@@ -31,11 +31,11 @@ public class MidBean {
         this.student_section_mid = student_section_mid;
     }
 
-    public float getStudent_mid_marks() {
+    public String getStudent_mid_marks() {
         return student_mid_marks;
     }
 
-    public void setStudent_mid_marks(float student_mid_marks) {
+    public void setStudent_mid_marks(String student_mid_marks) {
         this.student_mid_marks = student_mid_marks;
     }
 }

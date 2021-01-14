@@ -4,7 +4,7 @@ public class QuizBean {
     private int student_id_quiz;
     private String  student_name_quiz;
     private String student_section_quiz;
-    private float student_quiz_marks;
+    private String student_quiz_marks;
 
 
     public int getStudent_id_quiz(){return student_id_quiz;}
@@ -29,11 +29,11 @@ public class QuizBean {
         this.student_section_quiz = student_section_quiz;
     }
 
-    public float getStudent_quiz_marks() {
+    public String getStudent_quiz_marks() {
         return student_quiz_marks;
     }
 
-    public void setStudent_quiz_marks(float student_quiz_marks) {
+    public void setStudent_quiz_marks(String student_quiz_marks) {
         this.student_quiz_marks = student_quiz_marks;
     }
 }

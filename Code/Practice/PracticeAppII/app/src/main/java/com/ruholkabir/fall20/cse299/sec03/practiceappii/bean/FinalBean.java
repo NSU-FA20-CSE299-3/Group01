@@ -4,7 +4,7 @@ public class FinalBean {
     private int student_id_final;
     private String  student_name_final;
     private String student_section_final;
-    private float student_final_marks;
+    private String student_final_marks;
 
 
     public int getStudent_id_final(){return student_id_final;}
@@ -30,11 +30,11 @@ public class FinalBean {
         this.student_section_final = student_section_final;
     }
 
-    public float getStudent_final_marks() {
+    public String getStudent_final_marks() {
         return student_final_marks;
     }
 
-    public void setStudent_final_marks(float student_final_marks) {
+    public void setStudent_final_marks(String student_final_marks) {
         this.student_final_marks = student_final_marks;
     }
 }

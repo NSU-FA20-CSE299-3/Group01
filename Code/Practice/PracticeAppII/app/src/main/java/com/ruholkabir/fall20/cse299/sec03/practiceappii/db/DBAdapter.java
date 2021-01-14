@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import com.ruholkabir.fall20.cse299.sec03.practiceappii.bean.FacultyBean;
+import com.ruholkabir.fall20.cse299.sec03.practiceappii.bean.FinalBean;
 import com.ruholkabir.fall20.cse299.sec03.practiceappii.bean.MidBean;
 import com.ruholkabir.fall20.cse299.sec03.practiceappii.bean.QuizBean;
 import com.ruholkabir.fall20.cse299.sec03.practiceappii.bean.StudentBean;
@@ -412,12 +413,78 @@ public class DBAdapter extends SQLiteOpenHelper {
         db.close();
     }
 
+    public ArrayList<QuizBean> getQuizMarksBySection(String student_section)
+    {
+        ArrayList<QuizBean> list = new ArrayList<>();
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT * FROM quiz_table where student_section='"+student_section+"' ";
+        Cursor cursor = db.rawQuery(query, null);
+
+        if(cursor.moveToFirst())
+        {
+            do{
+                QuizBean quizBean = new QuizBean();
+                quizBean.setStudent_id_quiz(Integer.parseInt(cursor.getString(0)));
+                quizBean.setStudent_name_quiz(cursor.getString(1));
+                quizBean.setStudent_section_quiz(cursor.getString(2));
+                quizBean.setStudent_quiz_marks(cursor.getString(3));
+                list.add(quizBean);
+            }while(cursor.moveToNext());
+        }
+        return list;
+    }
 
 
 
 
 
 
+    public ArrayList<MidBean> getMidMarksBySection(String student_section)
+    {
+        ArrayList<MidBean> list = new ArrayList<>();
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT * FROM mid_table where student_section='"+student_section+"' ";
+        Cursor cursor = db.rawQuery(query, null);
+
+        if(cursor.moveToFirst())
+        {
+            do{
+                MidBean midBean = new MidBean();
+                midBean.setStudent_id_mid(Integer.parseInt(cursor.getString(0)));
+                midBean.setStudent_name_mid(cursor.getString(1));
+                midBean.setStudent_section_mid(cursor.getString(2));
+                midBean.setStudent_mid_marks(cursor.getString(3));
+                list.add(midBean);
+            }while(cursor.moveToNext());
+        }
+        return list;
+    }
+
+
+
+    public ArrayList<FinalBean> getFinalMarksBySection(String student_section)
+    {
+        ArrayList<QuizBean> list = new ArrayList<>();
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT * FROM final_table where student_section_quiz='"+student_section+"' ";
+        Cursor cursor = db.rawQuery(query, null);
+
+        if(cursor.moveToFirst())
+        {
+            do{
+                QuizBean quizBean = new QuizBean();
+                quizBean.setStudent_id_quiz(Integer.parseInt(cursor.getString(0)));
+                quizBean.setStudent_name_quiz(cursor.getString(1));
+                quizBean.setStudent_section_quiz(cursor.getString(2));
+                quizBean.setStudent_quiz_marks(cursor.getString(3));
+                list.add(quizBean);
+            }while(cursor.moveToNext());
+        }
+        return list;
+    }
 
 
 
