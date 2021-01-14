@@ -33,7 +33,7 @@ public class DBAdapter extends SQLiteOpenHelper {
 
 
 
-    private static final String KEY_FACULTY_ID = "faculty_id";
+        private static final String KEY_FACULTY_ID = "faculty_id";
         private static final String KEY_FACULTY_FIRSTNAME = "faculty_firstname";
         private static final String KEY_FACULTY_LASTNAME = "faculty_Lastname";
         private static final String KEY_FACULTY_MO_NO = "faculty_mobilenumber";
@@ -466,7 +466,7 @@ public class DBAdapter extends SQLiteOpenHelper {
 
     public ArrayList<FinalBean> getFinalMarksBySection(String student_section)
     {
-        ArrayList<QuizBean> list = new ArrayList<>();
+        ArrayList<FinalBean> list = new ArrayList<>();
 
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "SELECT * FROM final_table where student_section_quiz='"+student_section+"' ";
@@ -475,12 +475,12 @@ public class DBAdapter extends SQLiteOpenHelper {
         if(cursor.moveToFirst())
         {
             do{
-                QuizBean quizBean = new QuizBean();
-                quizBean.setStudent_id_quiz(Integer.parseInt(cursor.getString(0)));
-                quizBean.setStudent_name_quiz(cursor.getString(1));
-                quizBean.setStudent_section_quiz(cursor.getString(2));
-                quizBean.setStudent_quiz_marks(cursor.getString(3));
-                list.add(quizBean);
+                FinalBean finalBean = new FinalBean();
+                finalBean.setStudent_id_final(Integer.parseInt(cursor.getString(0)));
+                finalBean.setStudent_name_final(cursor.getString(1));
+                finalBean.setStudent_section_final(cursor.getString(2));
+                finalBean.setStudent_final_marks(cursor.getString(3));
+                list.add(finalBean);
             }while(cursor.moveToNext());
         }
         return list;
