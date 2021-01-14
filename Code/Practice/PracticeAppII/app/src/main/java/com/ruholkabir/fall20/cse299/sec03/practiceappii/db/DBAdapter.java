@@ -7,6 +7,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import com.ruholkabir.fall20.cse299.sec03.practiceappii.bean.FacultyBean;
+import com.ruholkabir.fall20.cse299.sec03.practiceappii.bean.MidBean;
+import com.ruholkabir.fall20.cse299.sec03.practiceappii.bean.QuizBean;
 import com.ruholkabir.fall20.cse299.sec03.practiceappii.bean.StudentBean;
 
 import java.util.ArrayList;
@@ -22,11 +24,15 @@ public class DBAdapter extends SQLiteOpenHelper {
 
         private static final String FACULTY_INFO_TABLE = "faculty_table";
         private static final String STUDENT_INFO_TABLE = "student_table";
+        private static final String QUIZ_INFO_TABLE = "quiz_table";
+        private static final String MID_INFO_TABLE = "mid_table";
+        private static final String FINAL_INFO_TABLE = "final_table";
 
 
 
 
-        private static final String KEY_FACULTY_ID = "faculty_id";
+
+    private static final String KEY_FACULTY_ID = "faculty_id";
         private static final String KEY_FACULTY_FIRSTNAME = "faculty_firstname";
         private static final String KEY_FACULTY_LASTNAME = "faculty_Lastname";
         private static final String KEY_FACULTY_MO_NO = "faculty_mobilenumber";
@@ -40,7 +46,22 @@ public class DBAdapter extends SQLiteOpenHelper {
         private static final String KEY_STUDENT_MO_NO = "student_mobilenumber";
         private static final String KEY_STUDENT_SECTION = "student_section";
 
+        private static final String KEY_STUDENT_ID_QUIZ = "student_id_quiz";
+        private static final String KEY_STUDENT_NAME_QUIZ = "student_name_quiz";
+        private static final String KEY_STUDENT_SECTION_QUIZ = "student_section_quiz";
+        private static final String KEY_QUIZ_MARKS = "quiz_marks";
 
+
+        private static final String KEY_STUDENT_ID_MID = "student_id_mid";
+        private static final String KEY_STUDENT_NAME_MID = "student_name_mid";
+        private static final String KEY_STUDENT_SECTION_MID = "student_section_mid";
+        private static final String KEY_MID_MARKS = "mid_marks";
+
+
+        private static final String KEY_STUDENT_ID_FINAL = "student_id_final";
+        private static final String KEY_STUDENT_NAME_FINAL = "student_name_final";
+        private static final String KEY_STUDENT_SECTION_FINAL = "student_section_final";
+        private static final String KEY_FINAL_MARKS = "quiz_marks";
 
 
 
@@ -72,13 +93,36 @@ public class DBAdapter extends SQLiteOpenHelper {
                     KEY_STUDENT_SECTION + " TEXT " + ")";
             Log.d("queryStudent",queryStudent );
 
+            String queryQuiz = "CREATE TABLE "+ QUIZ_INFO_TABLE + " ("+
+                    KEY_STUDENT_ID_QUIZ + "INTEGER, " +
+                    KEY_STUDENT_NAME_QUIZ + " TEXT, " +
+                    KEY_STUDENT_SECTION_QUIZ + " TEXT, " +
+                    KEY_QUIZ_MARKS + "TEXT " + ")" ;
+            Log.d("queryQuiz", queryQuiz);
 
+            String queryMid = "CREATE TABLE "+ MID_INFO_TABLE + " ("+
+                    KEY_STUDENT_ID_MID + "INTEGER, " +
+                    KEY_STUDENT_NAME_MID + " TEXT, " +
+                    KEY_STUDENT_SECTION_MID + " TEXT, " +
+                    KEY_MID_MARKS + "TEXT " + ")" ;
+            Log.d("queryMid", queryMid);
+
+
+            String queryFinal = "CREATE TABLE "+ FINAL_INFO_TABLE + " ("+
+                    KEY_STUDENT_ID_FINAL + "INTEGER, " +
+                    KEY_STUDENT_NAME_FINAL + " TEXT, " +
+                    KEY_STUDENT_SECTION_FINAL + " TEXT, " +
+                    KEY_FINAL_MARKS + "TEXT " + ")" ;
+            Log.d("queryFinal", queryFinal);
 
 
             try
             {
                 db.execSQL(queryFaculty);
                 db.execSQL(queryStudent);
+                db.execSQL(queryQuiz);
+                db.execSQL(queryMid);
+                db.execSQL(queryFinal);
 
             }
             catch (Exception e) {
@@ -111,10 +155,36 @@ public class DBAdapter extends SQLiteOpenHelper {
             Log.d("queryStudent",queryStudent );
 
 
+            String queryQuiz = "CREATE TABLE "+ QUIZ_INFO_TABLE + " ("+
+                    KEY_STUDENT_ID_QUIZ + "INTEGER, " +
+                    KEY_STUDENT_NAME_QUIZ + " TEXT, " +
+                    KEY_STUDENT_SECTION_QUIZ + " TEXT, " +
+                    KEY_QUIZ_MARKS + "TEXT " + ")" ;
+            Log.d("queryQuiz", queryQuiz);
+
+            String queryMid = "CREATE TABLE "+ MID_INFO_TABLE + " ("+
+                    KEY_STUDENT_ID_MID + "INTEGER, " +
+                    KEY_STUDENT_NAME_MID + " TEXT, " +
+                    KEY_STUDENT_SECTION_MID + " TEXT, " +
+                    KEY_MID_MARKS + "TEXT " + ")" ;
+            Log.d("queryMid", queryMid);
+
+
+            String queryFinal = "CREATE TABLE "+ FINAL_INFO_TABLE + " ("+
+                    KEY_STUDENT_ID_FINAL + "INTEGER, " +
+                    KEY_STUDENT_NAME_FINAL + " TEXT, " +
+                    KEY_STUDENT_SECTION_FINAL + " TEXT, " +
+                    KEY_FINAL_MARKS + "TEXT " + ")" ;
+            Log.d("queryFinal", queryFinal);
+
+
             try
             {
                 db.execSQL(queryFaculty);
                 db.execSQL(queryStudent);
+                db.execSQL(queryQuiz);
+                db.execSQL(queryMid);
+                db.execSQL(queryFinal);
 
             }
             catch (Exception e) {
@@ -292,6 +362,76 @@ public class DBAdapter extends SQLiteOpenHelper {
             db.execSQL(query);
             db.close();
         }
+
+    public void addQuizMarks(QuizBean quizBean) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        String query = "INSERT INTO quiz_table (student_id_quiz,student_name_quiz,student_section_quiz,quiz_marks) values ('"+
+
+                quizBean.getStudent_id_quiz()+"', '"+
+                quizBean.getStudent_name_quiz()+"', '"+
+                quizBean.getStudent_section_quiz()+"', '"+
+                quizBean.getStudent_quiz_marks()+"')";
+
+        Log.d("query", query);
+        db.execSQL(query);
+        db.close();
+    }
+
+
+
+    public void addMidMarks(MidBean midBean) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        String query = "INSERT INTO mid_table (student_id_quiz,student_name_quiz,student_section_quiz,quiz_marks) values ('"+
+
+                midBean.getStudent_id_mid()+"', '"+
+                midBean.getStudent_name_mid()+"', '"+
+                midBean.getStudent_section_mid()+"', '"+
+                midBean.getStudent_mid_marks()+"')";
+
+        Log.d("query", query);
+        db.execSQL(query);
+        db.close();
+    }
+
+
+
+    public void addFinalMarks(QuizBean quizBean) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        String query = "INSERT INTO quiz_table (student_id_quiz,student_name_quiz,student_section_quiz,quiz_marks) values ('"+
+
+                quizBean.getStudent_id_quiz()+"', '"+
+                quizBean.getStudent_name_quiz()+"', '"+
+                quizBean.getStudent_section_quiz()+"', '"+
+                quizBean.getStudent_quiz_marks()+"')";
+
+        Log.d("query", query);
+        db.execSQL(query);
+        db.close();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
