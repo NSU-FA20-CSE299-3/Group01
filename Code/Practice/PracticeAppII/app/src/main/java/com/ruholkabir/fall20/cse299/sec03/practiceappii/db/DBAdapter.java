@@ -398,15 +398,15 @@ public class DBAdapter extends SQLiteOpenHelper {
 
 
 
-    public void addFinalMarks(QuizBean quizBean) {
+    public void addFinalMarks(FinalBean finalBean) {
         SQLiteDatabase db = this.getWritableDatabase();
 
-        String query = "INSERT INTO quiz_table (student_id_quiz,student_name_quiz,student_section_quiz,quiz_marks) values ('"+
+        String query = "INSERT INTO final_table (student_id_final,student_name_final,student_section_final,final_marks) values ('"+
 
-                quizBean.getStudent_id_quiz()+"', '"+
-                quizBean.getStudent_name_quiz()+"', '"+
-                quizBean.getStudent_section_quiz()+"', '"+
-                quizBean.getStudent_quiz_marks()+"')";
+                finalBean.getStudent_id_final()+"', '"+
+                finalBean.getStudent_name_final()+"', '"+
+                finalBean.getStudent_section_final()+"', '"+
+                finalBean.getStudent_final_marks()+"')";
 
         Log.d("query", query);
         db.execSQL(query);
