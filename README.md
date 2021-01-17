@@ -25,8 +25,8 @@ At the start of a semester a faculty member will be given a section on his parti
 
 <p><strong>Software Specification</strong></p>
 This Project has the following features -
-<p><strong>User Registration:</storng></p>
-To Access main activity of this android application user must need to register. Users must have to provide their information. They must include First name, Last name, Phone No, Address, Username and password. The Username will be used as a primary key to identify unique users.
+<p><strong>User Registration:</strong></p>
+<p>To Access main activity of this android application user must need to register. Users must have to provide their information. They must include First name, Last name, Phone No, Address, Username and password. The Username will be used as a primary key to identify unique users.</p>
  <br>
    <br>
  <p align="center">
