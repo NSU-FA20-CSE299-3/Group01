@@ -30,7 +30,7 @@ This Project has the following features -
  <br>
    <br>
  <p align="center">
-   <img width="700" height="420" src="Mockup/Register.png"><br>
+   <img width="200" height="380" src="Mockup/Register.png"><br>
    Figure 1.0
  </p>
  <p><em>Login to a specific platform:</em></p>
@@ -38,7 +38,7 @@ This Project has the following features -
  <br>
    <br>
  <p align="center">
-   <img width="200" height="420" src="Mockup/LoginActivity.png"><br>
+   <img width="200" height="380" src="Mockup/LoginActivity.png"><br>
    Figure 2.0
  </p>
  <p><em>Home Activity:</em></p>
@@ -46,7 +46,7 @@ This Project has the following features -
  <br>
    <br>
  <p align="center">
-   <img width="200" height="420" src="Mockup/HomeActivity.png"><br>
+   <img width="200" height="380" src="Mockup/HomeActivity.png"><br>
    Figure 3.0
  </p>
   <p><em>Add Student Activity:</em></p>
@@ -54,7 +54,7 @@ This Project has the following features -
  <br>
    <br>
  <p align="center">
-   <img width="200" height="420" src="Mockup/AddStudentActivity.png"><br>
+   <img width="200" height="380" src="Mockup/AddStudentActivity.png"><br>
    Figure 4.0
  </p>
   <p><em>Show Student Activity:</em></p>
@@ -62,7 +62,7 @@ This Project has the following features -
  <br>
    <br>
  <p align="center">
-   <img width="200" height="420" src="Mockup/ShowStudentActivity.png"><br>
+   <img width="200" height="380" src="Mockup/ShowStudentActivity.png"><br>
    Figure 5.0
  </p>
   <p><em>Marksheet Activity:</em></p>
@@ -70,7 +70,7 @@ This Project has the following features -
  <br>
    <br>
  <p align="center">
-   <img width="200" height="420" src="Mockup/MarksheetActivity.png"><br>
+   <img width="200" height="380" src="Mockup/MarksheetActivity.png"><br>
    Figure 6.0
  </p>
   <p><em>Show Student Progress Activity:</em></p>
@@ -78,7 +78,7 @@ This Project has the following features -
  <br>
    <br>
  <p align="center">
-   <img width="200" height="420" src="Mockup/StudentProgress.png"><br>
+   <img width="200" height="380" src="Mockup/StudentProgress.png"><br>
    Figure 7.0
  </p>
  
