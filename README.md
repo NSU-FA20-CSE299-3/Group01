@@ -38,8 +38,9 @@ There will be a lot of database. A database to keep Faculty’s username and pas
 At the start of a semester a faculty member will be given a section on his particular subject. In a section there will be 40 students. And throughout the semester the faculty have to upload regular data like Quiz-I marks, Quiz-II marks, MID marks, Project marks, Final Marks. At the end of the table there will be a column for total marks and Final Grade. Grade will be on a university’s grading policy (ex- North South University).</p>
 
 <h2 id="features">2. Software Specification</h2>
-<p><strong>&nbsp;</strong></p>
+
 This Project has the following features -
+<p><strong>&nbsp;</strong></p>
 <p><strong>User Registration:</strong></p>
 <p>To Access main activity of this android application user must need to register. Users must have to provide their information. They must include First name, Last name, Phone No, Address, Username and password. The Username will be used as a primary key to identify unique users.</p>
  <br>
