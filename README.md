@@ -33,9 +33,8 @@
 </ol>
 <br>
 <h2 id="#introduction">1. Introduction</h2>
-<p>I am going to build an app specially for faculty members. Where a faculty can manage his students data. A faculty is a very busy person so I think this app will help them to manage their students. They can keep track of their student’s data. They will be able to update data on regular basis. 
-There will be a lot of database. A database to keep Faculty’s username and password to login. And a database to keep students data like F.name, L.name, Id, PhoneNo, etc. And a database to keep data on regular basis like exam’s marks. 
-At the start of a semester a faculty member will be given a section on his particular subject. In a section there will be 40 students. And throughout the semester the faculty have to upload regular data like Quiz-I marks, Quiz-II marks, MID marks, Project marks, Final Marks. At the end of the table there will be a column for total marks and Final Grade. Grade will be on a university’s grading policy (ex- North South University).</p>
+<p>I have built an app specially for faculty members. Where a faculty can manage his students data. A faculty is a very busy person so I think this app will help them to manage their students. They can keep track of their student’s data. They will be able to update data on regular basis. There is a database where I created a lot of data table (Faculty table, student table, etc.). A data table to keep Faculty’s username and password to login. And a data table to keep students data like F.name, L.name, Id, PhoneNo, etc. And a data table to keep data on regular basis like exam’s marks. At the start of a semester a faculty member will be given a section on his particular subject. In a section there will be 40 students. And throughout the semester the faculty have to upload regular data like Quiz-I marks, Quiz-II marks, MID marks, Final Marks. At the end of the table there will be a column for total marks and Final Grade. Grade will be on a university’s grading policy (ex- North South University).
+</p>
 
 <h2 id="features">2. Software Specification</h2>
 
