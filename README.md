@@ -25,7 +25,7 @@ At the start of a semester a faculty member will be given a section on his parti
 
 <p><strong>Software Specification</strong></p>
 This Project has the following features -
-<p><em>User Registration:</em></p>
+<p><strong>User Registration:</storng></p>
 <p>To Access main activity of this android application user must need to register. Users must have to provide their information. They must include First name, Last name, Phone No, Address, Username and password. The Username will be used as a primary key to identify unique users.</p>
  <br>
    <br>
@@ -33,7 +33,7 @@ This Project has the following features -
    <img width="200" height="380" src="Mockup/Register.PNG"><br>
    Figure 1.0
  </p>
- <p><em>Login to a specific platform:</em></p>
+ <p><strong>Login to a specific platform:</strong></p>
  <p>After registering successfully then user have to go through login phase. The main	feature will be accessed after successfully logged in.</p>
  <br>
    <br>
@@ -41,7 +41,7 @@ This Project has the following features -
    <img width="200" height="380" src="Mockup/LoginActivity.PNG"><br>
    Figure 2.0
  </p>
- <p><em>Home Activity:</em></p>
+ <p><strong>Home Activity:</strong></p>
  <p>After login this application will show the user of it’s Home activity. Where user or a faculty member can use this application’s main features. User can add student by sections properly with Add Student button. User can view added student by section with Show Student button. User can view Student Mark sheet by pressing Mark sheet button. User can maintain exam marks with exam marks button and also can view student progress by student progress button.</p>
  <br>
    <br>
@@ -49,7 +49,7 @@ This Project has the following features -
    <img width="200" height="380" src="Mockup/HomeActivity.PNG"><br>
    Figure 3.0
  </p>
-  <p><em>Add Student Activity:</em></p>
+  <p><strong>Add Student Activity:</strong></p>
  <p>Here user can add student by sections. Just need some student information. Which are Student Id, Student first name, Student last name, Student phone no, student section.</p>
  <br>
    <br>
@@ -57,7 +57,7 @@ This Project has the following features -
    <img width="200" height="380" src="Mockup/AddStudentActivity.PNG"><br>
    Figure 4.0
  </p>
-  <p><em>Show Student Activity:</em></p>
+  <p><strong>Show Student Activity:</strong></p>
  <p>This Activity will present the student details which are added to the database. Like I already added two student data with add student activity and this activity is showing their corresponding data.</p>
  <br>
    <br>
@@ -65,7 +65,7 @@ This Project has the following features -
    <img width="200" height="380" src="Mockup/ShowStudentActivity.PNG"><br>
    Figure 5.0
  </p>
-  <p><em>Marksheet Activity:</em></p>
+  <p><strong>Marksheet Activity:</strong></p>
  <p>This activity is incomplete. Just represented the outlook of this activity.</p>
  <br>
    <br>
@@ -73,7 +73,7 @@ This Project has the following features -
    <img width="200" height="380" src="Mockup/MarksheetActivity.PNG"><br>
    Figure 6.0
  </p>
-  <p><em>Show Student Progress Activity:</em></p>
+  <p><strong>Show Student Progress Activity:</strong></p>
  <p>This activity is also incomplete. Just represented the outlook of this activity</p>
  <br>
    <br>
@@ -87,10 +87,10 @@ This Project has the following features -
 <p><strong>TECHNOLOGY</strong></p>
 
 <p>&nbsp;</p>
-<p><em>Proposed Technology Stack:</em></p>
+<p><strong>Proposed Technology Stack:</strong></p>
 <p>I proposed to Build mark sheet app by using Android studio 4.0.1 . Which is the latest version of android studio. Android studio is one of the most popular and a complete software to build android applications. For my Front end I decided to use xml to design my front end. For backend I decided to use java programming language. And for database I decided to use SQLiteOpenHelper to build database.</p>
 <p>&nbsp;</p>
-<p><em>Implemented Technology Stack:</em></p>
+<p><strong>Implemented Technology Stack:</strong></p>
 <p>For user interface I used the built in feature of android studio. I used Android Studio 4.0.1 . I used Java Programming language as my backend. Where all logical condition was running. For database I used built-in database method. I used SQLiteOpenHelper to write queries of SQL. I used xml to design my activities. I used Intents to connect my activity to activity. And Used 100% of Java programming language at the backend.</em></p>
 <p>&nbsp;</p>
 <p><strong>Monetization</strong></p>
