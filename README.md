@@ -3,10 +3,10 @@
 <p align="center"><strong><img src="https://media.dhakatribune.com/uploads/2016/11/nsulogo.jpg" alt="" width="307" height="172" /></strong></p>
 <p align="center"><strong>North South University</strong></p>
 <p align="center">Department of Electrical &amp; Computer Engineering</p>
-<p align="center"><strong>Project Proposal</strong></p>
+<p align="center"><strong>Project Report</strong></p>
 <p align="center"><strong>Group No</strong>: 01</p>
 <p align="center"><strong>Fall 2020</strong></p>
-<p align="center"><strong>Project Name</strong>: An Android app for faculty members to manage students data.</p>
+<p align="center"><strong>Project Name</strong>: An Android app for faculty members to manage students data - Marksheet App.</p>
 <p align="center"><strong>Course No</strong>: CSE 299 <strong>Sec</strong><strong>:</strong> 03</p>
 <p align="center"><strong>Faculty</strong>: Shaikh Shawon Arefin Shimon (Sas3)</p>
 <p align="center"><strong>Name</strong><strong>:</strong> Kazi Ruhol Kabir Moahhed </p>
@@ -15,7 +15,7 @@
 
 
 <p align="center"><strong>Git Repository</strong><strong>: </strong><a href="https://github.com/NSU-FA20-CSE299-3/Group01">https://github.com/NSU-FA20-CSE299-3/Group01/</a></p>
-<p align="center"><strong>Date Prepared</strong><strong>: </strong>11/11/2020</p>
+<p align="center"><strong>Date Prepared</strong><strong>: </strong>18/01/2021</p>
 <p><strong>&nbsp;</strong></p>
 <p><strong>&nbsp;</strong></p>
 <p><strong>INTRODUCTION</strong></p>
@@ -23,30 +23,75 @@
 There will be a lot of database. A database to keep Faculty’s username and password to login. And a database to keep students data like F.name, L.name, Id, PhoneNo, etc. And a database to keep data on regular basis like exam’s marks. 
 At the start of a semester a faculty member will be given a section on his particular subject. In a section there will be 40 students. And throughout the semester the faculty have to upload regular data like Quiz-I marks, Quiz-II marks, MID marks, Project marks, Final Marks. At the end of the table there will be a column for total marks and Final Grade. Grade will be on a university’s grading policy (ex- North South University).</p>
 
-<p><strong>FEATURES</strong></p>
-<ul>
-<li>	Easy to handle the app.</li>
-<li>	Able to install in low end devices( at least android lollipop 5.0)</li>
-<li>	Easy presentation to understand</li>
-<li>	Easy Log-in process to take shorter time </li>
-<li>	FAQ on every activity if anything is not understandable. </li>
-<li>	A menu activity to manage sections properly</li>
-<li>	An activity to view students data</li>
-<li>	A mark sheet activity to update exam’s mark regularly</li>
-<li>	An activity to watch student’s progress on total marks</li>
-<li>	Students can be searched by ID to see their progress</li>
-</ul>
+<p><strong>Software Specification</strong></p>
+This Project has the following features -
+<p><em>User Registration:</em></p>
+<p>To Access main activity of this android application user must need to register. Users must have to provide their information. They must include First name, Last name, Phone No, Address, Username and password. The Username will be used as a primary key to identify unique users.</p>
+ <br>
+   <br>
+ <p align="center">
+   <img width="700" height="420" src="mockup/Register.png"><br>
+   Figure 1.0
+ </p>
+ <p><em>Login to a specific platform:</em></p>
+ <p>After registering successfully then user have to go through login phase. The main	feature will be accessed after successfully logged in.</p>
+ <br>
+   <br>
+ <p align="center">
+   <img width="700" height="420" src="mockup/LoginActivity.png"><br>
+   Figure 2.0
+ </p>
+ <p><em>Home Activity:</em></p>
+ <p>After login this application will show the user of it’s Home activity. Where user or a faculty member can use this application’s main features. User can add student by sections properly with Add Student button. User can view added student by section with Show Student button. User can view Student Mark sheet by pressing Mark sheet button. User can maintain exam marks with exam marks button and also can view student progress by student progress button.</p>
+ <br>
+   <br>
+ <p align="center">
+   <img width="700" height="420" src="mockup/HomeActivity.png"><br>
+   Figure 3.0
+ </p>
+  <p><em>Add Student Activity:</em></p>
+ <p>Here user can add student by sections. Just need some student information. Which are Student Id, Student first name, Student last name, Student phone no, student section.</p>
+ <br>
+   <br>
+ <p align="center">
+   <img width="700" height="420" src="mockup/AddStudentActivity.png"><br>
+   Figure 4.0
+ </p>
+  <p><em>Show Student Activity:</em></p>
+ <p>This Activity will present the student details which are added to the database. Like I already added two student data with add student activity and this activity is showing their corresponding data.</p>
+ <br>
+   <br>
+ <p align="center">
+   <img width="700" height="420" src="mockup/ShowStudentActivity.png"><br>
+   Figure 5.0
+ </p>
+  <p><em>Marksheet Activity:</em></p>
+ <p>This activity is incomplete. Just represented the outlook of this activity.</p>
+ <br>
+   <br>
+ <p align="center">
+   <img width="700" height="420" src="mockup/MarksheetActivity.png"><br>
+   Figure 6.0
+ </p>
+  <p><em>Show Student Progress Activity:</em></p>
+ <p>This activity is also incomplete. Just represented the outlook of this activity</p>
+ <br>
+   <br>
+ <p align="center">
+   <img width="700" height="420" src="mockup/StudentProgress.png"><br>
+   Figure 7.0
+ </p>
+ 
+
+
 <p><strong>TECHNOLOGY</strong></p>
-<p>I will build this Android app on Android Studio 4.0.1. The latest version for android developers to build android apps.</p>
+
 <p>&nbsp;</p>
-<p><em>Frontend</em></p>
-<p>Basically in applications there are User Interface. They called activity. Where users can watch the main purpose of an application. There will be multiple activity. Users will go through them with pressing some buttons or inputs. I will design these activities with android studio. It will be .xml file.</p>
-<p><em>Backend</em></p>
-<p>Basically in applications backend means where the logics are working. I will connect the activities with intents. I will use JAVA on the maximum part and maybe if needed I will use C/C++ in some portion of the backend. And it will be .java file.</p>
-<p><em>Database</em></p>
-<p>Here database will be created in the main coding. Database will hold the data of students and faculty members.</p>
-<p><em>Server</em></p>
-<p>If I use online database then I have to purchase space to hold the data and connect users with the database.</p>
+<p><em>Proposed Technology Stack:</em></p>
+<p>I proposed to Build mark sheet app by using Android studio 4.0.1 . Which is the latest version of android studio. Android studio is one of the most popular and a complete software to build android applications. For my Front end I decided to use xml to design my front end. For backend I decided to use java programming language. And for database I decided to use SQLiteOpenHelper to build database.</p>
+<p>&nbsp;</p>
+<p><em>Implemented Technology Stack:</em></p>
+<p>For user interface I used the built in feature of android studio. I used Android Studio 4.0.1 . I used Java Programming language as my backend. Where all logical condition was running. For database I used built-in database method. I used SQLiteOpenHelper to write queries of SQL. I used xml to design my activities. I used Intents to connect my activity to activity. And Used 100% of Java programming language at the backend.</em></p>
 <p>&nbsp;</p>
 <p><strong>Monetization</strong></p>
 <p>This is actually a customized project not a generic project. This type of project held for particular organization. </p>
@@ -55,3 +100,6 @@ At the start of a semester a faculty member will be given a section on his parti
 <p><strong>Social Impact</strong></p>
 <p>This application will help the faculty or teachers. They are very busy to manage their student’s data properly. They don’t have enough time to do a lot of works properly at a time. They will be able to sort out the marks of students and don’t need to waste their time to calculate the final grade.</p>
 <p>&nbsp; </p>
+<p><strong>Conclusion</strong></p>
+<p>Marksheet App is basically made for the faculty members. Where the faculty members will be able to use by username password verification. Their data will be protected with most security. They will be the most user of this app. The features of this app will help them to maintain the marks distribution of their students properly. And most important thing is this application will help them to maintain their time because it will cost them less time than other process of marks distribution.</p>
+
