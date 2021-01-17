@@ -18,12 +18,26 @@
 <p align="center"><strong>Date Prepared</strong><strong>: </strong>18/01/2021</p>
 <p><strong>&nbsp;</strong></p>
 <p><strong>&nbsp;</strong></p>
-<p><strong>INTRODUCTION</strong></p>
+
+
+<h2> Project Name: Marksheet App </h2><br>
+<h3 id="table-of-contents">Table of contents</h3>
+
+<ol>
+  <a href="#introduction"><li>Introduction</li><br></a>
+  <a href="#features"><li>Software Specification</li><br></a>
+  <a href="#technology"><li>Technology</li><br></a>
+  <a href="#monetization"><li>Monetization</li></a><br>
+  <a href="#conclusion"><li>Conclusion</li></a><br><hr>
+
+</ol>
+<br>
+<h2 id="#introduction">1. Introduction</h2>
 <p>I am going to build an app specially for faculty members. Where a faculty can manage his students data. A faculty is a very busy person so I think this app will help them to manage their students. They can keep track of their student’s data. They will be able to update data on regular basis. 
 There will be a lot of database. A database to keep Faculty’s username and password to login. And a database to keep students data like F.name, L.name, Id, PhoneNo, etc. And a database to keep data on regular basis like exam’s marks. 
 At the start of a semester a faculty member will be given a section on his particular subject. In a section there will be 40 students. And throughout the semester the faculty have to upload regular data like Quiz-I marks, Quiz-II marks, MID marks, Project marks, Final Marks. At the end of the table there will be a column for total marks and Final Grade. Grade will be on a university’s grading policy (ex- North South University).</p>
 
-<p><strong>Software Specification</strong></p>
+<h2 id="features">2. Software Specification</h2>
 This Project has the following features -
 <p><strong>User Registration:</strong></p>
 <p>To Access main activity of this android application user must need to register. Users must have to provide their information. They must include First name, Last name, Phone No, Address, Username and password. The Username will be used as a primary key to identify unique users.</p>
@@ -84,7 +98,7 @@ This Project has the following features -
  
 
 
-<p><strong>TECHNOLOGY</strong></p>
+ <h2 id="#technology">3. Technology</h2>
 
 <p>&nbsp;</p>
 <p><strong>Proposed Technology Stack:</strong></p>
@@ -93,13 +107,14 @@ This Project has the following features -
 <p><strong>Implemented Technology Stack:</strong></p>
 <p>For user interface I used the built in feature of android studio. I used Android Studio 4.0.1 . I used Java Programming language as my backend. Where all logical condition was running. For database I used built-in database method. I used SQLiteOpenHelper to write queries of SQL. I used xml to design my activities. I used Intents to connect my activity to activity. And Used 100% of Java programming language at the backend.</em></p>
 <p>&nbsp;</p>
-<p><strong>Monetization</strong></p>
+<h2 id="monetization">4. Monetization</h2>
 <p>This is actually a customized project not a generic project. This type of project held for particular organization. </p>
 <p>My application basically is on educational purpose. So, I have to charge an amount of money to an educational organization like North South University who will use this app.</p>
 <p>&nbsp;</p>
 <p><strong>Social Impact</strong></p>
 <p>This application will help the faculty or teachers. They are very busy to manage their student’s data properly. They don’t have enough time to do a lot of works properly at a time. They will be able to sort out the marks of students and don’t need to waste their time to calculate the final grade.</p>
 <p>&nbsp; </p>
-<p><strong>Conclusion</strong></p>
-<p>Marksheet App is basically made for the faculty members. Where the faculty members will be able to use by username password verification. Their data will be protected with most security. They will be the most user of this app. The features of this app will help them to maintain the marks distribution of their students properly. And most important thing is this application will help them to maintain their time because it will cost them less time than other process of marks distribution.</p>
+<h2>5. Conclusion</h2>
+<p id="#conclusion">
+Marksheet App is basically made for the faculty members. Where the faculty members will be able to use by username password verification. Their data will be protected with most security. They will be the most user of this app. The features of this app will help them to maintain the marks distribution of their students properly. And most important thing is this application will help them to maintain their time because it will cost them less time than other process of marks distribution.</p>
 
